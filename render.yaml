@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: geoserver
+    env: docker
+    plan: free
+    dockerfilePath: Dockerfile
+    envVars:
+      - key: GEOSERVER_ADMIN_USER
+        value: admin
+      - key: GEOSERVER_ADMIN_PASSWORD
+        value: geoserver
+    autoDeploy: true
